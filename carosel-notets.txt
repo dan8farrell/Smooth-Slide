@@ -1,0 +1,57 @@
+carousel-notets.txt
+
+********************Mario site with eternal scroll of levels***********************
+
+*************IMG FOUND HERE**********************************************************
+-ian-albert.com/games/super_mario_bros_maps/
+
+*************COLOR SCHEME******************************************************************
+
+SKYBLUE:#9290FF
+CLOUDS: #FFFFFF
+CLOUDS BLUE:#64B0FF
+FL-BRICKS: #994E00
+MTN GREEN: #0D9300
+BUSH GREEN: #88D800
+? BLOCK OUTER: #EA922
+? BLOCK "?": SAME AS FLOOR BRICKS
+PIPE: MTN GREEN AND BUSH GREEN COLORS 
+MARIO RED: #D82800
+MARIO SHIRT GREEN: #757800
+
+************Implementations**************************************************************
+1)movie reels
+2)video game levels  (2d)
+3)graffiti walls
+4)BEAGz
+
+
+Todo list
+-make function to cut up mario levels to random lengths && end of cut is start of next cut.??
+-find template 
+-mario facts 
+-choose fonts 
+-find background images for site (bricks,clouds,pipes)
+-pipe navbar animations for navbar? (korny punkazz bitch)
+-continue code school refresh (animations, jQuery)
+-center current image in  carousel
+-make carousel wider 
+-Mario glove cursor onHover events???
+-Mario themed arrows(for next/prev functionality?)
+-Make responsive
+-...why the fuck does it show vertically for split second on load?????
+-cut ">" symbols out below imgs
+
+
+
+Done
+-download gifs of levels
+-converted to jpgs ^
+-use plugin with any old photos to see how it works
+-autoslide functionality
+-make slide functionality smooth and linear 
+-color pick for mario site color scheme
+-change time paramater on autoslide
+-make first image start in center with nothing to left(cut out castle)
+-http://coolcarousels.frebsite.nl/c/23/ MOVE LIKE THIS?!?!?!? HOWZ I DO'D IT?
+
