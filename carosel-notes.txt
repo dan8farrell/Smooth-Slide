@@ -39,8 +39,9 @@ Todo list
 -Mario glove cursor onHover events???
 -Mario themed arrows(for next/prev functionality?)
 -Make responsive
--...why the fuck does it show vertically for split second on load?????
+-...why does it show vertically for split second on load?????
 -cut ">" symbols out below imgs
+-mario glove cursor onHover?
 
 
 
@@ -54,4 +55,52 @@ Done
 -change time paramater on autoslide
 -make first image start in center with nothing to left(cut out castle)
 -http://coolcarousels.frebsite.nl/c/23/ MOVE LIKE THIS?!?!?!? HOWZ I DO'D IT?
+*******************************************************************************
+************Fonts/Images:******************************************************
+Fonts/Images: just pull font and background images off of their site
 
+
+************1-1 slider*********************************************************
+Name:AUTOSLIDE
+Functionality: Slides rotate automatically/ pause on hover/ able to slide it back and forth with cursor/ Auto restarts when cursor is off.
+
+Notes/Content: No Additional Content Needed
+
+
+
+
+************1-2 slider*********************************************************
+Name:HoverScroll
+Functionality:Starts scroll onHover
+
+Notes/Content: Leave little note enticing user to hover.
+
+
+
+
+
+************1-3 slider*********************************************************
+Name: Traditional
+Functionality: Give Traditional functionality (arrows...dots and whatnot).
+
+
+Notes/Content: Dots:true; arrows:true; Just your average initialization/
+perhaps best to do with just images and not the level as it'll look weird. Or maybe fuck this one all together. World 1-3 isn't iconic at all. 
+
+
+
+
+
+************1-4 slider*********************************************************
+Name: Super Slider Bros
+Functionality:Scrolls to the right indefinetly. No Tim Allen functionality. Two Mushrooms one poison for slow speed... one normal for increase speed.
+
+Notes/Content:
+poison-mushroom.png
+mushroom.png
+
+
+
+
+
+*********************************************************************************
