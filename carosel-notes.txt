@@ -26,20 +26,16 @@ MARIO SHIRT GREEN: #757800
 4)BEAGz
 
 
-Todo list
--make function to cut up mario levels to random lengths && end of cut is start of next cut.??
--find template 
--mario facts 
+Todo list 
 -choose fonts 
 -find background images for site (bricks,clouds,pipes)
--pipe navbar animations for navbar? (korny punkazz bitch)
 -continue code school refresh (animations, jQuery)
 -center current image in  carousel
 -make carousel wider 
 -Mario glove cursor onHover events???
 -Mario themed arrows(for next/prev functionality?)
 -Make responsive
--...why does it show vertically for split second on load?????
+-...why  op does it show vertically for split second on load?????
 -cut ">" symbols out below imgs
 -mario glove cursor onHover?
 
