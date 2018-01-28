@@ -22,6 +22,7 @@
 
     .title{
       font-family:'polygon party';
+      text-shadow: -1px 0 black, 0 1px purple, 1px 0 purple, 0 -1px yellow;
       text-align: center;
       font-size: 150px;
       color:#fff;
@@ -35,8 +36,13 @@
 
     .slick-slide {
       margin: 0px;
-      vertical-align: middle;
-      transition-timing-function: ;
+      opacity: 1;
+    }
+    .slick-track {
+      height: 224px;
+    }
+    .spaced-images .slick-slide {
+      margin: 15px;
     }
 
     .slick-slide img {
@@ -46,11 +52,6 @@
     .slick-prev:before,
     .slick-next:before {
       color: black;
-    }
-
-
-    .slick-slide {
-      opacity: 1;
     }
     
     .slick-active {
@@ -85,7 +86,7 @@
 <!--BOX ART -->
 
 <h1 class='title'>SLOODERZ</h1>
-  <section class='variable-width slider'>  <div class="image-scale translatinator">
+  <section class='spaced-images variable-width slider'>  <div class="image-scale translatinator">
     <img class='image-box' src="../../imgs/box1.png">
   </div>
   <div class="image-scale translatinator">
@@ -101,6 +102,12 @@
     <img class='image-box' src="../../imgs/box5.png">
   </div>
 </section>
+
+
+
+
+
+
 <!--World 1-1 -->
 <h1 class="title">SLIDER</h1>
   <section class="variable1 slider">
@@ -163,7 +170,13 @@
     </div>
     <div class = "image-scale translatinator">
       <img src="../../imgs/mario-1-1 [www.imagesplitter.net]-0-19.jpeg">>
-    </div>        
+    </div>     
+    <div class = "image-scale translatinator">
+      <img src="../../imgs/mario-banner1.jpeg">>
+    </div>   
+    <div class = "image-scale translatinator">
+      <img src="../../imgs/mario-banner1a.jpeg">>
+    </div>                         
   </section>
 
   <!--World 1-2 -->
@@ -361,7 +374,6 @@
     </div>        
   </section>
  
- <!--Carousel of Mario games when clicked lil description pops up in visualy pleasing manor? -->
 
     <div>
       <!-- this slide should inherit the sizes attr from the parent slider -->
@@ -414,11 +426,14 @@ $('.variable-width').slick({
         variableWidth: true,
     //    centerPadding: 100px;
         cssEase: 'linear',
-        speed: 2000,
+        speed: 200,
         touchMove: false,
 
       });
-      $('.variable2').slick('slickPlay');
+      
+      $('.slick-slide').on('mouseover',function(){
+      $('.variable2').slickNext();
+        });
       
       $(".variable3").slick({
         dots: false,
@@ -458,7 +473,7 @@ $('.variable-width').slick({
 function colorizeText(elem) {
     var txt = elem.innerText;
     var new_elem = document.createElement('div');
-    var colors = ['#9290FF','#994E00','#0D9300','#D82800'];
+    var colors = ['#ff3939',' #00ce00','#ffce29','#00deff'];
     var color_idx = 0;
     for (var i=0; i < txt.length; i++) {
         // make a new <span> for each letter
@@ -485,6 +500,7 @@ colorizeText( document.getElementsByClassName('title')[0]);
 colorizeText( document.getElementsByClassName('title')[1]);
 colorizeText( document.getElementsByClassName('title')[2]);
 colorizeText( document.getElementsByClassName('title')[3]);
+colorizeText( document.getElementsByClassName('title')[4]);
 
 // $( document ).ready(function() {
 //    $('.titl')

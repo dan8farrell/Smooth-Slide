@@ -20,26 +20,17 @@ MARIO RED: #D82800
 MARIO SHIRT GREEN: #757800
 
 ************Implementations**************************************************************
-1)movie reels
-2)video game levels  (2d)
-3)graffiti walls
-4)BEAGz
-
 
 Todo list 
--choose fonts 
--find background images for site (bricks,clouds,pipes)
--continue code school refresh (animations, jQuery)
--center current image in  carousel
--make carousel wider 
--Mario glove cursor onHover events???
--Mario themed arrows(for next/prev functionality?)
--Make responsive
+-make carousel wider -Mario themed arrows(for next/prev functionality?)
 -...why  op does it show vertically for split second on load?????
 -cut ">" symbols out below imgs
 -mario glove cursor onHover?
-
-
+-Resize and center  images on box Art(Add dots)
+-Text shadow on font
+-change distance between carousels and font
+-refactor images to use js for less code 
+-stop speed up at the end of carousel on diff sized images (mario-banner1 + 1a)
 
 Done
 -download gifs of levels
@@ -54,6 +45,9 @@ Done
 *******************************************************************************
 ************Fonts/Images:******************************************************
 Fonts/Images: just pull font and background images off of their site
+
+
+*************Box Art Slide*****************************************************
 
 
 ************1-1 slider*********************************************************
