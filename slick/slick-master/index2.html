@@ -367,7 +367,7 @@
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
     $(document).on('ready', function() {
-
+$('.title').append(interpolator(20,1))
 
 $('.fade').slick({
   dots: true,
@@ -379,7 +379,7 @@ $('.fade').slick({
 });
       $('.variable-width').slick('slickPlay');
 
-     /* $(".variable1").slick({
+      $(".variable1").slick({
         dots: false,
         infinite: true,
         autoplay: true,
@@ -393,7 +393,7 @@ $('.fade').slick({
     //    centerPadding: 100px;
         cssEase: 'linear',
         speed: 2000,
-      });*/
+      });
       $('.variable').slick('slickPlay');
 
     });
@@ -430,11 +430,10 @@ function interpolator(maxImg,level){
 var toAdd = document.createDocumentFragment();
 for(var i=0; i <=maxImg; i++){
    var newDiv = document.createElement('div');
-   newDiv.id = `<div class = "image-scale translatinator">
-      <img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg">
-    </div>`
+   newDiv= `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
   console.log(newDiv);
-  $('.title').append(newDiv);
+     newDiv.className = 'image-scale';
+     toAdd.append(newDiv);
  }
 }
 </script>
