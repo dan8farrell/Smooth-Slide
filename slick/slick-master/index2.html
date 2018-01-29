@@ -430,8 +430,8 @@ function interpolator(maxImg,level){
 var toAdd = document.createDocumentFragment();
 for(var i=0; i <=maxImg; i++){
    var newDiv = document.createElement('div');
-   newDiv= `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
-  console.log(newDiv);
+   newDiv= '<div><img src="../../imgs/mario-1-'+level+'[www.imagesplitter.net]-0-'+i+'.jpeg"></div>'
+  console.log(toAdd);
      newDiv.className = 'image-scale';
      toAdd.append(newDiv);
  }
