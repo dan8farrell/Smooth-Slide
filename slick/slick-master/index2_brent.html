@@ -73,8 +73,13 @@
   width:75%;
   margin: 0 auto;
 }
-
-
+    .slide{
+      position:relative;
+    }
+   .opac {
+      opacity:0.4;
+    }
+    
 
   </style>
 
@@ -86,8 +91,29 @@
 <div class="test variable1">
 </div>
 
-<!--World 1-1 -->
-
+  <section class="regular slider">
+   <div class = 'slide'>
+    <img class='image-box' src="../../imgs/box1.png">
+  </div>   
+   <div class = 'slide '>
+    <img class = 'opac' src="../../imgs/box1.png">
+    <h2>The one that startred it all!</h2>
+  </div>
+  <div class = 'slide'>
+    <img src="../../imgs/box2.png">
+  </div>  
+  <div class = 'slide '>
+    <img class = 'opac' src="../../imgs/box2.png">
+    <h2>The one that continued it all!</h2>
+  </div>
+  <div class = 'slide'>
+    <img  src="../../imgs/box3.png">
+  </div>  
+  <div class = 'slide '>
+    <img class = 'opac' src="../../imgs/box3.png">
+    <h2>The one that was another installment in a franchise that coninued it all! opac</h2>
+  </div>
+  </section>
 
 
 
@@ -124,6 +150,14 @@ $('.title').append(interpolator(20,1))
        }); 
        $('.variable').slick('slickPlay');
 
+       $(".regular").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          speed: 3,
+       });
     });
 // fn to rotate the colors of each letter
 function colorizeText(elem) {

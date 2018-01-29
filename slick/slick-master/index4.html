@@ -14,23 +14,21 @@
     * {
       box-sizing: border-box;
     }
-h2 {
- position: absolute;
- top: 75%;
- left: 50%;
- -webkit-transform: translate(-50%, -50%);
- transform: translate(-50%, -50%);
- color: red;
- font-size: 24px;
- font-family:sans-serif, arial, 'times new;
- -webkit-transition: all 300ms ease;
- transition: all 300ms ease;
- text-transform: uppercase;
-}
-.slide {
-  position: relative;
-}
-    .slider {
+    h2 {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: red;
+      font-size: 24px;
+      font-family:sans-serif;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      text-transform: uppercase;
+    }
+
+    .slider1 {
         width: 75%;
         height:50%;
         margin: 100px auto;
@@ -50,34 +48,9 @@ h2 {
       opacity:0.4;
     }
 
-
     .slick-prev:before,
     .slick-next:before {
       color: black;
-    }
-    .slick-track{
-      display: flex;
-    }
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-      vertical-align: middle;
-    }
-
-    .slick-slide .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-        display: flex;
-  height: auto;
-    }
-    
-    .slick-active {
-      opacity: .5;
-    }
-
-    .slick-current {
-      opacity: 1;
     }
 
     .slide{
@@ -112,17 +85,11 @@ h2 {
   </div>
   </section>
 
- 
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-    </div>
-  </section>
-
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
+
     $(document).on('ready', function() {
-    
       $(".regular").slick({
         dots: true,
         infinite: true,
@@ -130,27 +97,8 @@ h2 {
         slidesToScroll: 1,
         centerMode: true,
         speed: 3,
-
-
-      });
-      $(".center").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        slidesToShow: 5,
-        slidesToScroll: 3
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
       });
     });
 </script>
-
 </body>
 </html>
