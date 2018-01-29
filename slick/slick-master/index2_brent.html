@@ -1,26 +1,14 @@
-<!-- orignial master index.html is saved at original-index.html in slick-master folder-->
-<!DOCTYPE html>
-<html>
 <head>
-  <title>Slick Playground</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="./slick/slick.css">
   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
   <style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
 
     body {
          background-image: url("https://daks2k3a4ib2z.cloudfront.net/58cec2c0909757c65094d18e/5909d8e118423f673f8cdcfb_footer%20desktop.png");
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    .title{
+    .title {
       font-family:'polygon party';
       text-shadow: -1px 0 black, 0 1px purple, 1px 0 purple, 0 -1px yellow;
       text-align: center;
@@ -29,208 +17,99 @@
       bottom:5px;
     }
 
-    .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
-
-    .slick-slide {
-      margin: 0px;
-      opacity: 1;
-    }
     .slick-track {
       height: 224px;
     }
-    .spaced-images .slick-slide {
-      margin: 15px;
-    }
 
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-    .slick-active {
-      opacity: .5;
-    }
-
-    .slick-current {
-      opacity: 1;
-    }
-
-    .image-scale{
-    height: auto;
-    width: auto;
-    max-width: 500px;
-    max-height: 244px;
-}
-
-.variable1{
-  width:75%;
-  margin: 0 auto;
-}
-    .slide{
-      position:relative;
-    }
-   .opac {
-      opacity:0.4;
-    }
-        .slider1 {
-        width: 75%;
-        height:50%;
-        margin: 100px auto;
-        padding: 10px;
-    }
-
-    .slick-slide1 {
-      margin: 0px 200px;
-    }
-
-    .slick-slide1 img {
-      width: 100%;
-      height: 100%;
-    }
-
-    .slide1{
-      position:relative;
+    .slider-container {
+      margin: 0 auto;
     }
 
   </style>
-
 </head>
+
 <body>
+
   <h1 class="title">SLIDER</h1>
-<div class="background">
-<div class="test variable1">
-</div>
 
-  <section class="regular slider">
-   <div class = 'slide1'>
-    <img class='image-box' src="../../imgs/box1.png">
-  </div>   
-   <div class = 'slide1 '>
-    <img class = 'opac' src="../../imgs/box1.png">
-    <h2>The one that startred it all!</h2>
+  <div class="slider-container">
   </div>
-  <div class = 'slide1'>
-    <img src="../../imgs/box2.png">
-  </div>  
-  <div class = 'slide1 '>
-    <img class = 'opac' src="../../imgs/box2.png">
-    <h2>The one that continued it all!</h2>
-  </div>
-  <div class = 'slide1'>
-    <img  src="../../imgs/box3.png">
-  </div>  
-  <div class = 'slide1 '>
-    <img class = 'opac' src="../../imgs/box3.png">
-    <h2>The one that was another installment in a franchise that coninued it all! opac</h2>
-  </div>
-  </section>
-
-
-
-    <div>
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
-    </div>
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
 
-$(document).on('ready', function() {
-  $('.title').append(interpolator(20,1))
-
-      $('.variable-width').slick('slickPlay');
-
-      $(".variable1").slick({
-         dots: false,
-         infinite: true,
-         autoplay: true,
-         autoplaySpeed: 0.5,
-         arrows: true,
-     //    initialSlide: 20,
-     //  autoplaySpeed default is 3000...lower ===faster
-         centerMode: true,
-     //    slidesPerRow: 2,
-     //  slidesToShow:10,
-         variableWidth: true,
-     //    centerPadding: 100px;
-         cssEase: 'linear',
-         speed: 2000,
-       });
-       $('.variable').slick('slickPlay');
-
-       $(".regular").slick({
-          dots: true,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          speed: 3,
-       });
+    $(document).on('ready', function() {
+      $('.title').append(interpolator(20,1))
+      $(".slider-container").slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 0.5,
+        speed: 1200,
+        arrows: true,
+        //  initialSlide: 20,
+        //  autoplaySpeed default is 3000...lower ===faster
+        centerMode: true,
+        //  slidesPerRow: 2,
+        //  slidesToShow:10,
+        variableWidth: true,
+        //  centerPadding: 100px;
+        cssEase: 'linear',
+      });
     });
-// fn to rotate the colors of each letter
-function colorizeText(elem) {
-    var txt = elem.innerText;
-    var new_elem = document.createElement('div');
-    var colors = ['#ff3939',' #00ce00','#ffce29','#00deff'];
-    var color_idx = 0;
-    for (var i=0; i < txt.length; i++) {
-        // make a new <span> for each letter
-        var new_span = document.createElement('span');
-        new_span.innerHTML = txt[i];
 
-        // set the color of the span
-        var this_color = colors[color_idx];
-        new_span.setAttribute('style', 'color: ' + this_color);
+    // fn to rotate the colors of each letter
+    function colorizeText(elem) {
+        var txt = elem.innerText;
+        var new_elem = document.createElement('div');
+        var colors = ['#ff3939',' #00ce00','#ffce29','#00deff'];
+        var color_idx = 0;
+        for (var i=0; i < txt.length; i++) {
+            // make a new <span> for each letter
+            var new_span = document.createElement('span');
+            new_span.innerHTML = txt[i];
 
-        // cycle to next color
-        color_idx++;
-        // (wrap back around if we get to the end of the colors)
-        color_idx = color_idx % colors.length;
+            // set the color of the span
+            var this_color = colors[color_idx];
+            new_span.setAttribute('style', 'color: ' + this_color);
 
-        console.log(new_span);
-        new_elem.appendChild(new_span);
+            // cycle to next color
+            color_idx++;
+            // (wrap back around if we get to the end of the colors)
+            color_idx = color_idx % colors.length;
+
+            console.log(new_span);
+            new_elem.appendChild(new_span);
+        }
+        elem.innerHTML = new_elem.innerHTML; // swap in the contents
     }
-    elem.innerHTML = new_elem.innerHTML; // swap in the contents
-}
-colorizeText( document.getElementsByClassName('title')[0]);
+    colorizeText(document.getElementsByClassName('title')[0]);
 
-
-//interpolator
-function interpolator(maxImg,level){
-  var level = 1;
-  for(var i = 0; i <= maxImg; i++){
-    var newDiv = document.createElement('div');
-    newDiv = `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
-    newDiv.className = 'image-scale';
-    $('.test').append(newDiv);
-    if(i === 19){
-       $('.test').append(`<div class = "image-scale translatinator">
-       <img src="../../imgs/mario-banner1.jpeg">>
-       </div>
-       <div class = "image-scale translatinator">
-       <img src="../../imgs/mario-banner2.jpeg">>
-       </div>
-       <div class = "image-scale translatinator">
-       <img src="../../imgs/mario-banner3.jpeg">>
-       </div>
-       <div class = "image-scale translatinator">
-       <img src="../../imgs/mario-banner4.jpeg">>
-       </div>`);
-       i = 0;
-       level++;
+    //interpolator
+    function interpolator(maxImg,level){
+      var level = 1;
+      for(var i = 0; i <= maxImg; i++){
+        $('.slider-container').append(`<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`);
+        if(i === 19){
+           $('.slider-container').append(`<div class = "image-scale translatinator">
+           <img src="../../imgs/mario-banner1.jpeg">>
+           </div>
+           <div class = "image-scale translatinator">
+           <img src="../../imgs/mario-banner2.jpeg">>
+           </div>
+           <div class = "image-scale translatinator">
+           <img src="../../imgs/mario-banner3.jpeg">>
+           </div>
+           <div class = "image-scale translatinator">
+           <img src="../../imgs/mario-banner4.jpeg">>
+           </div>`);
+           i = 0;
+           level++;
+        }
+       if (level > 4){break;}
+      }
     }
-   if (level > 4){break;}
-  }
-}
-</script>
 
+  </script>
 </body>
-</html>
