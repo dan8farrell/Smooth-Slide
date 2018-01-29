@@ -95,14 +95,13 @@
       <!-- this slide should inherit the sizes attr from the parent slider -->
       <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
     </div>
-  </section>
-</div>
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
-    $(document).on('ready', function() {
-$('.title').append(interpolator(20,1))
 
+$(document).on('ready', function() {
+  $('.title').append(interpolator(20,1))
 
       $('.variable-width').slick('slickPlay');
 
@@ -121,7 +120,7 @@ $('.title').append(interpolator(20,1))
      //    centerPadding: 100px;
          cssEase: 'linear',
          speed: 2000,
-       }); 
+       });
        $('.variable').slick('slickPlay');
 
     });
@@ -156,29 +155,29 @@ colorizeText( document.getElementsByClassName('title')[0]);
 //interpolator
 function interpolator(maxImg,level){
   var level = 1;
-for(var i=0; i <=maxImg; i++){
-   var newDiv = document.createElement('div');
-   newDiv= `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
-     newDiv.className = 'image-scale';
-     $('.test').append(newDiv);
-     if(i === 19){
-    $('.test').append(`<div class = "image-scale translatinator">
-    <img src="../../imgs/mario-banner1.jpeg">>
-    </div>
-    <div class = "image-scale translatinator">
-    <img src="../../imgs/mario-banner2.jpeg">>
-    </div>
-    <div class = "image-scale translatinator">
-    <img src="../../imgs/mario-banner3.jpeg">>
-    </div>
-    <div class = "image-scale translatinator">
-    <img src="../../imgs/mario-banner4.jpeg">>
-    </div>`);
-    i = 0;
-    level++;
-  }
+  for(var i = 0; i <= maxImg; i++){
+    var newDiv = document.createElement('div');
+    newDiv = `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
+    newDiv.className = 'image-scale';
+    $('.test').append(newDiv);
+    if(i === 19){
+       $('.test').append(`<div class = "image-scale translatinator">
+       <img src="../../imgs/mario-banner1.jpeg">>
+       </div>
+       <div class = "image-scale translatinator">
+       <img src="../../imgs/mario-banner2.jpeg">>
+       </div>
+       <div class = "image-scale translatinator">
+       <img src="../../imgs/mario-banner3.jpeg">>
+       </div>
+       <div class = "image-scale translatinator">
+       <img src="../../imgs/mario-banner4.jpeg">>
+       </div>`);
+       i = 0;
+       level++;
+    }
    if (level > 4){break;}
- }
+  }
 }
 </script>
 
