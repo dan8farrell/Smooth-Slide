@@ -35,7 +35,8 @@
 
     .slick-prev:before,
     .slick-next:before {
-      color: black;
+      color: white;
+      font-size:30px;
     }
 
 
@@ -106,14 +107,6 @@
         centerMode: true,
       });
 
-$('.fade').slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  centerMode: true
-});
       $('.variable-width').slick('slickPlay');
 
       $(".variable1").slick({
@@ -122,12 +115,8 @@ $('.fade').slick({
         autoplay: true,
         autoplaySpeed: 1,
         arrows: true,
-    //  autoplaySpeed default is 3000...lower ===faster
         centerMode: true,
-    //    slidesPerRow: 2,
-    //    slidesToShow: 2,
         variableWidth: true,
-    //    centerPadding: 100px;
         cssEase: 'linear',
         speed: 2000,
       });
@@ -167,9 +156,6 @@ colorizeText( document.getElementsByClassName('title')[2]);
 colorizeText( document.getElementsByClassName('title')[3]);
 colorizeText( document.getElementsByClassName('title')[4]);
 
-// $( document ).ready(function() {
-//    $('.titl')
-//});
 </script>
 
 </body>
