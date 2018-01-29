@@ -428,14 +428,11 @@ colorizeText( document.getElementsByClassName('title')[0]);
 
 //interpolator
 function interpolator(maxImg,level){
-// var toAdd = document.createDocumentFragment();
 for(var i=0; i <=maxImg; i++){
    var newDiv = document.createElement('div');
-   newDiv = "<div><img src='../../imgs/mario-1-'+level+' [www.imagesplitter.net]-0-'+i+'.jpeg'></div>"
-   // console.log(newDiv);
+   newDiv= `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
      newDiv.className = 'image-scale';
      $('.test').append(newDiv);
-     // toAdd.append(newDiv);
  }
 }
 </script>
