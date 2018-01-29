@@ -84,7 +84,7 @@
 <body>
 <div class="background">
 
-<div class="test">
+<div class="test variable1">
 </div>
 
 <!--World 1-1 -->
@@ -380,22 +380,22 @@ $('.fade').slick({
 });
       $('.variable-width').slick('slickPlay');
 
-    //   $(".variable1").slick({
-    //     dots: false,
-    //     infinite: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 1,
-    //     arrows: true,
-    // //  autoplaySpeed default is 3000...lower ===faster
-    //     centerMode: true,
-    // //    slidesPerRow: 2,
-    // //    slidesToShow: 2,
-    //     variableWidth: true,
-    // //    centerPadding: 100px;
-    //     cssEase: 'linear',
-    //     speed: 2000,
-    //   });
-    //   $('.variable').slick('slickPlay');
+      $(".variable1").slick({
+         dots: false,
+         infinite: true,
+         autoplay: true,
+         autoplaySpeed: 1,
+         arrows: true,
+     //  autoplaySpeed default is 3000...lower ===faster
+         centerMode: true,
+     //    slidesPerRow: 2,
+     //    slidesToShow: 2,
+         variableWidth: true,
+     //    centerPadding: 100px;
+         cssEase: 'linear',
+         speed: 600,
+       });
+       $('.variable').slick('slickPlay');
 
     });
 // fn to rotate the colors of each letter
@@ -427,19 +427,27 @@ colorizeText( document.getElementsByClassName('title')[0]);
 
 
 //interpolator
-function interpolator(level){
+function interpolator(maxImg,level){
+  var level = 1;
 for(var i=0; i <=maxImg; i++){
+
    var newDiv = document.createElement('div');
    newDiv= `<div><img src="../../imgs/mario-1-`+level+` [www.imagesplitter.net]-0-`+i+`.jpeg"></div>`
      newDiv.className = 'image-scale';
      $('.test').append(newDiv);
- }
-      $('.test').append(`    <div class = "image-scale translatinator">
-      <img src="../../imgs/mario-banner1.jpeg">>
+     if(i === 19){      
+
+    $('.test').append(`    <div class = "image-scale translatinator">
+    <img src="../../imgs/mario-banner1.jpeg">>
     </div>
     <div class = "image-scale translatinator">
-      <img src="../../imgs/mario-banner1a.jpeg">>
+    <img src="../../imgs/mario-banner1a.jpeg">>
     </div>`);
+    i = 0;
+    level++;
+  }
+  else if (level > 4){break;}
+ }
 }
 </script>
 
